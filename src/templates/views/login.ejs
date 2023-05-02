@@ -1,11 +1,26 @@
 <%- include('../partials/header-dark.ejs') %>
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-3">
+            <div class="card mt-5">
+                <div class="card-body">
+                    <h1 class="mb-4 text-center">Quizly</h1>
+                    <p class="text-center">Welcome! 
+                        With quizly, you can create your own quiz and keep track of quiz scores and number of submissions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <main class="container">
     <div class="row">
         <div class="col-md-6 offset-3">
             <div class="card mt-5">
                 <div class="card-body">
-                    <h1 class="mb-4">Login</h1>
+                    <h1 class="mb-4 text-center">Sign In</h1>
                     <form method="POST" action="/auth/login" enctype="application/x-www-form-urlencoded">
                         <div class="form-group">
                             <label for="email">Email</label>
@@ -18,7 +33,7 @@
                         <div class="form-group">
                             <a href="/auth/register"><small>Don't have an account? Register here.</small></a>
                         </div>
-                        <button type="submit" class="btn btn-primary">Login</button>
+                        <button type="submit" class="btn btn-primary">Sign In</button>
                     </form>
                 </div>
             </div>
