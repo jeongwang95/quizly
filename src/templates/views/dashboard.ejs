@@ -14,25 +14,25 @@
             </tr>
         </thead>
         <tbody>
-						<% if (user.quizzes){ %>
-            <% for (const quiz of user.quizzes) { %>
-                <tr>
-                    <td>
-                        <a href="/quiz/<%= quiz.slug %>"><strong><%= quiz.title %></strong></a>
-                        <br>
-                        <small><%= quiz.description %></small>
-                    </td>
-                    <td>
-                        <%= quiz.submissions.length %>
-                    </td>
-                    <td>
-                        <% if (quiz.avgScore) { %>
-                            <%= quiz.avgScore?.toFixed(2) %>%
-                        <% } %>
-                    </td>
-                </tr>
-            <% } %>
-						<% } %>
+			<% if (user.quizzes){ %>
+                <% for (const quiz of user.quizzes) { %>
+                    <tr>
+                        <td>
+                            <a href="/quiz/<%= quiz.slug %>"><strong><%= quiz.title %></strong></a>
+                            <br>
+                            <small><%= quiz.description %></small>
+                        </td>
+                        <td>
+                            <%= quiz.submissions.length %>
+                        </td>
+                        <td>
+                            <% if (quiz.avgScore) { %>
+                                <%= quiz.avgScore?.toFixed(2) %>%
+                            <% } %>
+                        </td>
+                    </tr>
+                <% } %>
+			<% } %>
         </tbody>
     </table>
 </main>
